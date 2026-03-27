@@ -46,8 +46,8 @@ def index():
         results = model.predict(
             source=upload_path,
             save=True,
-            conf=0.25,
-            imgsz=320
+            conf=0.20,
+            imgsz=480
         )
 
         predicted_dir = results[0].save_dir
