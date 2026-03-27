@@ -41,6 +41,6 @@ http://localhost:5000
 
  
 
-
+The app is deployed on Render’s free tier, so the first request after inactivity may take longer because the service spins down when idle.
 
 
