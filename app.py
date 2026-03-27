@@ -15,6 +15,7 @@ os.makedirs(PREDICTION_FOLDER, exist_ok=True)
 
 # Load your trained model
 model = YOLO(MODEL_PATH)
+model.to("cpu")  # Force CPU to reduce memory usage on Render
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -37,8 +38,13 @@ def index():
         upload_path = os.path.join(UPLOAD_FOLDER, filename)
         file.save(upload_path)
 
-        # Run prediction
-        results = model.predict(source=upload_path, save=True, conf=0.25)
+        # Run prediction with smaller image size to reduce memory usage
+        results = model.predict(
+            source=upload_path,
+            save=True,
+            conf=0.25,
+            imgsz=320
+        )
 
         # Get saved prediction image
         predicted_dir = results[0].save_dir
