@@ -13,9 +13,9 @@ MODEL_PATH = "model/best.pt"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(PREDICTION_FOLDER, exist_ok=True)
 
-# Load your trained model
+# Load trained model
 model = YOLO(MODEL_PATH)
-model.to("cpu")  # Reduce memory usage on Render
+model.to("cpu")
 
 
 @app.route("/healthz")
@@ -62,5 +62,4 @@ def index():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port, debug=False)
+    app.run(host="0.0.0.0", port=7860)
