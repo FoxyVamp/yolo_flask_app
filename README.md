@@ -50,6 +50,6 @@ http://localhost:5000
 
  
 
-The app is deployed on Render’s free tier, so the first request after inactivity may take longer because the service spins down when idle.
+Note: The app is hosted on Hugging Face free tier. The first load may take a short time due to cold start, but subsequent requests run faster.
 
 
