@@ -13,9 +13,14 @@ MODEL_PATH = "model/best.pt"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(PREDICTION_FOLDER, exist_ok=True)
 
-# Load trained model
-model = YOLO(MODEL_PATH)
-model.to("cpu")
+model = None
+
+def get_model():
+    global model
+    if model is None:
+        model = YOLO(MODEL_PATH)
+        model.to("cpu")
+    return model
 
 
 @app.route("/healthz")
@@ -43,7 +48,7 @@ def index():
         upload_path = os.path.join(UPLOAD_FOLDER, filename)
         file.save(upload_path)
 
-        results = model.predict(
+        results = get_model().predict(
             source=upload_path,
             save=True,
             conf=0.20,
