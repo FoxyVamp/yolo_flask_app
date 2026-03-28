@@ -1,3 +1,12 @@
+---
+title: YOLOv8 Phone and Laptop Detection
+emoji: 🚀
+colorFrom: purple
+colorTo: blue
+sdk: docker
+app_port: 7860
+---
+
 # 📱💻 Phone vs Laptop Detection App
 
 ## Preview
