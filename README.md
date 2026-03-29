@@ -83,6 +83,7 @@ http://localhost:7860
   - object size and angle
 - Smaller objects (like phones) may be harder to detect at lower resolutions
 - Running on CPU may result in slower inference
+- The application works reliably on desktop browsers; some mobile devices, especially iPhone browsers, may experience compatibility issues depending on browser behavior or uploaded image format
 - The **first request** may be **slower** due to **cold** start on free hosting
 
 # ⚙️ 5. Technical Details
