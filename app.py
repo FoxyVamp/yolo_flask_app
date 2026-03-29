@@ -1,3 +1,48 @@
+Hugging Face's logo
+Hugging Face
+Models
+Datasets
+Spaces
+Buckets
+new
+Docs
+Enterprise
+Pricing
+
+
+Hugging Face is way more fun with friends and colleagues! 🤗 Join an organization
+Spaces:
+FoxyVamp
+/
+yolo-phone-laptop-detection
+
+
+like
+0
+
+Logs
+App
+Files
+Community
+Settings
+yolo-phone-laptop-detection
+/
+app.py
+
+FoxyVamp's picture
+FoxyVamp
+Improve detection by increasing image size to 640
+ec10a89
+verified
+about 19 hours ago
+raw
+
+Copy download link
+history
+blame
+edit
+delete
+1.8 kB
 from flask import Flask, render_template, request
 from ultralytics import YOLO
 from werkzeug.utils import secure_filename
