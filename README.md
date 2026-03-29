@@ -73,6 +73,7 @@ http://localhost:7860
 3. Click Run Detection
 4. The model will process the image
 5. View the result with bounding boxes and confidence scores
+6. For best results, upload JPG, PNG, or HEIC images
 
 # ⚠️ 4. Known Issues & Limitations
 - The model only detects two classes: phone and laptop
